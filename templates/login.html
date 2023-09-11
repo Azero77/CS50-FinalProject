@@ -1,0 +1,45 @@
+{% extends "layout.html"%}
+
+    {%block title%}
+    Login
+    {% endblock %}
+    {%block main %}
+    <div class="content">
+        <form action="/login" method="post" class="form-user">
+            <div class="header w-100 hover">
+                <h2 class="header-form text-center p-3 w-100">
+                    Azero
+                </h2>
+                <span class="text-center">Log In to continue your
+                    journey
+                </span>
+            </div>
+            <div class=" input-username">
+                <label class="label-input" for="username">
+                    Username:
+                </label>
+                <input type="text" name="username"
+                    id="username" autofocus autocomplete="off"
+                    class = "input">
+            </div>
+            <!--  -->
+            <div class=" input-password">
+                <label class="label-input" for="password">
+                    Password:
+                </label>
+                <input type="password" id="password"
+                    name="password"
+                    class = "input">
+            </div>
+            {% if error%}
+                <div class="warning">
+                    {{error}}
+                </div>
+            {% endif%}
+            <div class="submit">
+                <input type="submit" value="Login"
+                    class=" btn btn-secondary">
+            </div>
+        </form>
+    </div>
+    {% endblock %}

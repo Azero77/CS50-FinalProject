@@ -1,0 +1,24 @@
+<div class="content">
+    <div class="container">
+        {% for meal in plan%}
+        <div class="container-fluid">
+            <h4 class="meal_title">
+                <!-- meal and calories -->
+                {{meal}}:{{plan[meal][0]}}
+            </h4>
+            <div class="meal_names">
+                <ul>
+                    {% for foods in plan[meal][1] %}
+                    {% for food in foods %}
+                    <li>{{food}}
+                        <br>
+                        servings: {{foods[food]}}</li>
+                    {% endfor %}
+                    {%endfor%}
+                </ul>
+            </div>
+        </div>
+        {%endfor %}
+    </div>
+</div>
+

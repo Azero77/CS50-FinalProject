@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            {% block title %}{% endblock %}
+        </title>
+        <link rel="icon" href="../static/logo.png">
+        <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../static/css/all.min.css">
+        <link rel="stylesheet" href="../static/css/bootstrap.min.css.map">
+        <script src="../static/js/all.min.js"></script>
+        <script src="../static/js/bootstrap.bundle.min.js"></script>
+        <script src="../static/js/bootstrap.bundle.min.js.map"></script>
+        <script src = "../static/js/script.js"></script>
+        <link rel="stylesheet" href="../static/css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+            rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto&display=swap"
+            rel="stylesheet">
+
+    </head>
+    <body>
+        <nav
+            class="navbar navbar-expand-lg sticky text-light">
+            <div class="container-fluid">
+                <div class="logo navbar-brand p-3 hover ">
+                    <a href="/" class="light hover p-3">AZERO</a>
+                    <span>For better health</span>
+                </div>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse"
+                    id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown p-1 hover light">
+                            <a
+                                class="nav-link dropdown-toggle text-light light hover "
+                                href="#"
+                                role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Contact-me
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item"
+                                        href="https://t.me/AZERO_33">Telegram</a></li>
+                                <li><a class="dropdown-item"
+                                        href="https://www.instagram.com/anas_zaggar_99/">
+                                        Instagram</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item"
+                                        href="mailto:zaggar_azero_m@gmail.com">
+                                        email me</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item p-1">
+                            <a class="nav-link active light hover me-3"
+                                aria-current="page"
+                                href="/">Home</a>
+                        </li>
+                        <li class="nav-item p-1">
+                            <a class="nav-link light hover" href="/login">Login</a>
+                        </li>
+                        <li class="nav-item p-1">
+                            <a class="nav-link light hover" href="/register">Register</a>
+                        </li>
+                        <li class="nav-item p-1">
+                            <a class="nav-link light hover" href="/logout">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav> 
+        {%block main %}
+        {% endblock %}
+    </body>
+</html>

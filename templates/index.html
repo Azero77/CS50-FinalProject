@@ -1,0 +1,126 @@
+{%extends "layout.html"%}
+
+{% block title%}
+    main
+{% endblock%}
+
+{%block main %}
+    <div class="the-main">
+        
+        <div class="content inputs p-3 main">
+            <p class = "hello">
+                Hello, <span> {{(name.split())[0].title()}}</span>
+                <br>
+                Time to Grow and Control
+            </p>
+            <form method="POST" action = "/"
+                class="container-lg form-inputs">
+                <div class="form-control container-fluid">
+                    <label for="weight">
+                        Weight:
+                    </label>
+                    <input type="number"
+                        class="input weight"
+                        name="weight"
+                        id="weight"
+                        min="40"
+                        max="300"
+                        placeholder='(KG)'
+                        onmouseout="imposeMinMax(this)" required>
+                    <label for="height">
+                        Height
+                    </label>
+                    <input type="number" class="input height"
+                        min="90"
+                        max="250"
+                        onmouseout="imposeMinMax(this)"
+                        id="height"
+                        name='height'
+                        placeholder="(cm)" required>
+                </div>
+                <div class="container-fluid form-control">
+                    <label for="age">
+                        Age:
+                    </label>
+                    <input type="number" class="input age"
+                        min="1"
+                        max="150"
+                        id="age"
+                        name="age"
+                        placeholder="(years)"
+                        onmouseout="imposeMinMax(this)" required>
+                    <label for="meals">
+                        meals
+                    </label>
+                    <input type="number" class="input meals"
+                        min='1'
+                        max="9"
+                        id="meals"
+                        name="meals"
+                        onmouseout="imposeMinMax(this)"
+                        placeholder="number" required>
+                    <select name="gender" id="gender" class="select form-select">
+                        <option value="1" disabled selected>
+                            Gender
+                        </option>
+                        <option value="1">
+                            Male
+                        </option>
+                        <option value="0">
+                            Female
+                        </option>
+                    </select>
+                </div>
+                <div class="form-control">
+                    <select name="activity" id="activity"
+                        class="form-select select">
+                        <option value="0" disabled selected>Activity</option>
+                        <option value="0">little or no exercise</option>
+                        <option value="1">exercise 1-3 times a week</option>
+                        <option value="2">exercise 4-5 times a week</option>
+                        <option value="3">Daily exercise or intense exercise 3-4
+                            times a week</option>
+                        <option value="4">intense exercise 6-7 times a week</option>
+                        <option value="5"> intense exercise daily or physical
+                            job</option>
+                    </select>
+                </div>
+                <input type="submit" value="Generate" id = "submit"
+                    class="btn btn-secondary d-block p-3 center w-100 text-center">
+            </form>
+        </div>
+        <div class="cal">
+
+        </div>
+        {%if plan %}
+        <div class="content main result">
+            <h2>           
+                Your Intake : {{(cal)}}
+            </h2>
+            <div class="container">
+                {% for meal in plan%}
+                <div class="container-fluid meal">
+                    <h4 class="meal_title">
+                        <!-- meal and calories -->
+                        {{meal}}:{{plan[meal][0]}}
+                    </h4>
+                    <div class="meal_names">
+                        <ul>
+                            {% for foods in plan[meal][1] %}
+                            {% for food in foods %}
+                            <li>{{food}}
+                                <p style = "text-align : center">
+                                    servings: {{foods[food]}}
+                                </p>
+                            </li>
+                            {% endfor %}
+                            {%endfor%}
+                        </ul>
+                    </div>
+                </div>
+                {%endfor %}
+            </div>
+        </div> 
+        {% endif %}
+    </div>
+{% endblock %}

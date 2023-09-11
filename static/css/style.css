@@ -1,0 +1,267 @@
+:root {
+    --darkblue:#062c43;
+    --blue : #052e47;
+    --lightblue:  #5591a9;
+    --sky : #9ccddc;
+    --grey : #ced7e0;
+    --grey : rgb(170,170,170);
+    --beige : #9c7841;
+    --violet : #3e3148;
+    --warning :#d54d4d ;
+    --background : rgb(18 87 161 / 25%);
+}   
+
+body {
+    background-image: url(../pexels-erike-fusiki-8150269.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: white;
+}
+
+
+nav {
+    box-shadow: 3px 3px 3px var(--sky);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    background-color: var(--background);
+    transition-duration:0.5s ;
+    width: 100%;
+    }
+nav:hover {
+    box-shadow: 4px 4px 4px aqua;
+}
+.navbar-brand a {
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: auto;
+    font-size: 2rem;
+}
+.navbar-brand span {
+    color: var(--grey)  !important;
+    font-size: 0.5rem;
+    position: relative;
+    top: 5px;
+    left: -10px;
+}
+
+.light {
+    color: rgb(170, 170, 170) !important;
+}
+.hover {
+    transition: all 0.5s;
+}
+.hover:hover , .hover:focus , .hover:checked{
+    margin: 2px;
+    color: aqua !important;
+}
+.navbar-toggler {
+    padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
+    font-size: var(--bs-navbar-toggler-font-size);
+    line-height: 1;
+    color: white;
+    background-color: #ffffff;
+    border: var(--bs-border-width) solid rgb(255 255 255);
+    border-radius: var(--bs-navbar-toggler-border-radius);
+    transition-duration: 0.5s;
+}
+.navbar-toggler:hover , .navbar-toggler:checked , .navbar-toggler:focus {
+    border-color: aqua;
+    box-shadow: 0px -3px 3px aqua;
+}
+.navbar-toggler:hover ~ .dropdown-menu , .navbar-toggler:checked ~ .dropdown-menu , .navbar-toggler:focus ~ .dropdown-menu {
+    background-color: var(--background);
+}
+.content {
+    margin-left: 10%;
+    box-shadow: -5px -5px 20px 5px var(--sky);
+    background: var(--background);
+    width: 350px;
+    height: 500px;
+    border-radius: 10px;
+    margin-top: 10%;
+}
+/* mobile */
+/*tablets */
+@media (min-width : 576px)
+{
+    .content{
+        width: 450px;
+        height: 500px;
+    }
+}
+/* lg */
+@media (min-width : 768px)
+{
+    .content {
+        width: 500px;
+        height: 500px;
+    }
+}
+/* xl */
+@media (min-width : 992px)
+{
+    .content {
+        width: 600px;
+        height: 500px;
+    }
+}
+/* xxl */
+@media (min-width : 1200px)
+{
+    .content {
+        margin-top: 5%;
+        width: 700px;
+        height: auto;
+    }
+    .the-main {
+        display: flex;
+    }
+
+}
+.form-user {
+    width: 80%;
+    height: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.form-user  * {
+    display: block;
+    width: 90%;
+    text-shadow:5px 5px 10px var(--grey);
+    border-radius: 10px;
+}
+.header h2 {
+    font-size: 5rem;
+}
+
+.header h2::after {
+    content: ".com";
+    width: fit-content;
+    color: var;
+    font-size: 1rem;
+    position: relative;
+    left: -1rem;
+}
+.header span {
+    font-size: 1rem;
+    display: block;
+}
+.input{
+    background-color: var(--violet);
+    box-shadow: -1px -1px 10px var(--sky);
+    margin-top: 5px;
+    color: var(--grey);
+    transition-duration: 1s;
+}
+input:focus ,  input:hover , input:checked
+{
+    box-shadow: 4px 4px 20px var(--sky);
+    margin: 10px;
+}
+.label-input{
+    font-size: 1.5rem;
+}
+.label-input {
+    color: var(--sky);
+}
+
+.warning {
+    padding: 1rem;
+    margin : 1rem 0px ;
+    width: inherit;
+    background-color: var(--warning);
+    text-shadow: 1px 1px 2px var(--grey);
+}
+
+
+.form-inputs label {
+    color: var(--sky);
+    text-shadow: .2px .2px 2px aqua;
+}
+
+
+.form-inputs input {
+    display: initial;
+    border-radius: 5px;
+    color: var(--sky);
+    padding: 0.2rem;
+    text-align: start;
+    transition-delay: 2s;
+    width: 20%;
+    /* text-shadow: .2px .2px 2px aqua; */
+}
+
+.form-inputs > * {
+    box-shadow: 0px -2px 10px aqua;
+}
+
+
+.form-inputs > *:hover , .form-inputs > *:focus , .form-inputs > *:checked {
+    box-shadow : 0px -2px 20px aqua;
+}
+.form-inputs >* > * , .form-inputs > *{
+    margin: 2%;
+}
+
+.form-control {
+    background-color: var(--bs-body-color-rgb);
+    background-clip: padding-box;
+    border: 1px solid var(--sky);
+    border-radius: var(--bs-border-radius);
+}
+
+
+.form-select {
+    background-color: var(--sky);
+    position: relative;
+    left: -2.5%;
+}
+
+.main {
+    height: auto;
+}
+
+
+.hello {
+    text-align: center;
+    text-shadow: -1px -1px 10px aqua;
+    font-size: 1.5rem;
+}
+.hello span {
+    font-size: 2rem;
+    text-shadow: -1px -1px 20px var(--bs-orange);
+}
+
+.cal h4 {
+    text-align: center;
+    padding: 2rem;
+}
+
+.result {
+    padding: 5%;
+    color: var(--sky);
+}
+.meal_title{
+    color: var(--beige);
+}
+.meal_names {
+    color: var(--grey);
+}
+
+.main li {
+    color: var(--sky);
+    text-shadow: -1px -1px 20px aquamarine;
+    display: block;
+}
+
+.meal {
+    box-shadow: -1px -1px var(--beige);
+    padding: 2.5%;
+}
+.meal_title {
+    border-bottom: 2px 2px var(--darkblue);
+}
