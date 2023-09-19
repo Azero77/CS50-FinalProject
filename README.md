@@ -21,7 +21,8 @@ so I created a WebSite to make well-based diet just for yourself depending on yo
 
 <p>if we are using name with wrong password or even a username that does not exist in the db</p>
 
-![Uploading Screenshot (132).png…]()
+![Screenshot (132)](https://github.com/Azero77/CS50-FinalProject/assets/114386731/d83dc4cc-b275-4d46-b7ce-796bc16b117f)
+
 ![Screenshot (133)](https://github.com/Azero77/CS50-FinalProject/assets/114386731/8658ca61-e3fc-487d-9f1d-ecda3f903160)
 
 ### 2- register
@@ -37,6 +38,8 @@ so I created a WebSite to make well-based diet just for yourself depending on yo
 
 
 ### 4 - result
+
+![Screenshot (139)](https://github.com/Azero77/CS50-FinalProject/assets/114386731/e9ce3f42-e8dd-459c-9c65-0bcd114dc284)
 
 
 
