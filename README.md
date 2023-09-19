@@ -28,6 +28,7 @@ so I created a WebSite to make well-based diet just for yourself depending on yo
 ### 2- register
 
 <p>if we are using username in the db or a weak password</p>
+
 ![Screenshot (135)](https://github.com/Azero77/CS50-FinalProject/assets/114386731/9b9db135-471e-4076-b107-a9bb4d60e79b)
 
 ![Screenshot (134)](https://github.com/Azero77/CS50-FinalProject/assets/114386731/a0c232aa-5770-4314-bd94-456f4eec63ab)
